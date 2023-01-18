@@ -55,11 +55,11 @@ pi.grid(row = 1, column = 0)
 fact = Button(calc, text="x!", bg='grey',  height=2, width= 10, command=lambda : ft_factorial(int(string)))
 fact.grid(row = 1, column = 1)
     
-    # = Button(calc, text="x²", height=2, width= 10, command=lambda : ft_pow(int(string)))
-    #.grid(row = 1, column = 2)
+# = Button(calc, text="x²", height=2, width= 10, command=lambda : ft_pow(int(string)))
+#.grid(row = 1, column = 2)
 
-    # = Button(calc, text="*", height=2, width=10, command=lambda: button_click("*"))
-    #.grid(row = 1, column = 3)
+# = Button(calc, text="*", height=2, width=10, command=lambda: button_click("*"))
+#.grid(row = 1, column = 3)
 
 sqrt = Button(calc, text="√", bg='grey', height=2, width= 10, command=lambda : ft_sqrt(int(string)))
 sqrt.grid(row = 2, column = 0)
