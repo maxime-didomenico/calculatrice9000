@@ -13,14 +13,18 @@ def button_click(num):
     expr.set(string)
 
 def ft_result():
-    global string
-    result = str(eval(string)) 
-    expr.set(result)
-    string2 = StringVar()
-    string3 = str(string + "="  + str(result))
-    string2.set(string3)
-    ps = Label(history,textvariable=string2,pady=20, text="test")
-    ps.pack()
+    try:
+        global string
+        result = str(eval(string)) 
+        expr.set(result)
+        string2 = StringVar()
+        string3 = str(string + "="  + str(result))
+        string2.set(string3)
+        ps = Label(history,textvariable=string2,pady=20, text="test")
+        ps.pack()
+    except : 
+        expr.set(" error ")
+        formule = ""
 
 def ft_erase():
     global string
