@@ -1,4 +1,5 @@
 from tkinter import *
+import csv
 
 string = ""
 
@@ -13,6 +14,13 @@ def ft_result():
     global string
     result = str(eval(string)) 
     expr.set(result)
+    with open('history.csv', 'a', newline='') as csvfile:
+        fieldnames = ['expression', 'res']
+
+        thewriter = csv.DictWriter(csvfile, fieldnames=fieldnames)
+
+        thewriter.writeheader()
+        thewriter.writerow({'expression' : string, 'res' : result})
 
 def ft_erase():
     global string
